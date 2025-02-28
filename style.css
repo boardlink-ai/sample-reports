@@ -12,9 +12,8 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: #DDDDDD; /* Light grey text on dark background */
-  /* Subtle dark gradient with greenish undertones */
-  background: linear-gradient(135deg, #0F1513 0%, #1A2420 100%);
+  color: #333333;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 }
@@ -26,17 +25,17 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
-  background-color: #1F2523; /* Dark container background */
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /*----------------------------------------------------------
   HEADINGS & TEXT
 ----------------------------------------------------------*/
 h1, h2, h3, h4 {
+  color: #333333;
   margin-bottom: 15px;
-  color: #FFFFFF; /* White for strong contrast */
 }
 
 h1 {
@@ -48,23 +47,23 @@ h1 {
 h2 {
   font-size: 1.75em;
   margin-top: 30px;
-  #border-bottom: 2px solid #56D59B; /* Green accent underline */
+  border-bottom: 2px solid #eeee; /* accent line */
   padding-bottom: 5px;
 }
 
 h3 {
   font-size: 1.4em;
-  color: #56D59B; /* Green accent */
+  color: #333; /* accent heading */
 }
 
 h4 {
   font-size: 1.2em;
-  color: #56D59B;
+  color: #444;
 }
 
 p {
   margin-bottom: 15px;
-  color: #DDDDDD;
+  color: #555555;
 }
 
 ul, ol {
@@ -76,6 +75,28 @@ li {
 }
 
 /*----------------------------------------------------------
+  LINKS (General)
+----------------------------------------------------------*/
+a {
+  text-decoration: none;
+  color: #28A000;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #218000; /* Darker on hover */
+}
+
+/*----------------------------------------------------------
+  READ MORE LINKS (Bigger & Bolder)
+----------------------------------------------------------*/
+.read-more,
+.container p a {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------
   NAVIGATION
 ----------------------------------------------------------*/
 .nav-links {
@@ -84,14 +105,7 @@ li {
 
 .nav-links a {
   margin-right: 15px;
-  color: #56D59B; /* Green link color */
-  text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #42C186; /* Slightly darker/lusher green on hover */
 }
 
 /*----------------------------------------------------------
@@ -106,8 +120,8 @@ li {
 .media-placeholder video {
   max-width: 100%;
   height: auto;
-  border: 1px solid #444444;
-  background-color: #2A312E;
+  border: 1px solid #dddddd;
+  background-color: #fafafa;
   padding: 5px;
 }
 
@@ -115,12 +129,12 @@ li {
   BLOCKQUOTE
 ----------------------------------------------------------*/
 blockquote {
-  border-left: 5px solid #56D59B; /* Green accent bar */
-  background: #2A312E;
+  border-left: 5px solid #999; /* accent bar */
+  background: #f9f9f9;
   padding: 15px 20px;
   margin: 20px 0;
   font-style: italic;
-  color: #DDDDDD;
+  color: #555555;
 }
 
 /*----------------------------------------------------------
@@ -130,25 +144,24 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 30px;
-  color: #DDDDDD;
+  color: #333333;
 }
 
 table thead th {
-  background-color: #56D59B;
-  color: #FFFFFF;
+  background-color: #28A745;
+  color: #ffffff;
   padding: 10px;
   text-align: left;
 }
 
 table td, table th {
-  border: 1px solid #444444;
+  border: 1px solid #dddddd;
   padding: 8px;
   vertical-align: top;
-  background: #262B29; /* Default row background */
 }
 
 table tbody tr:nth-child(even) td {
-  background: #2A312E; /* Slightly different shade for even rows */
+  background-color: #f9f9f9;
 }
 
 /*----------------------------------------------------------
@@ -157,8 +170,8 @@ table tbody tr:nth-child(even) td {
 header {
   text-align: center;
   padding: 20px 0;
-  background-color: #111614; 
-  color: #FFFFFF;
+  background-color: #333333; 
+  color: #ffffff;
   position: relative;
 }
 
@@ -171,7 +184,7 @@ header img {
 header h1 {
   font-size: 2.5em;
   margin: 10px 0;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 
 /*----------------------------------------------------------
@@ -193,14 +206,7 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #56D59B; 
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #42C186;
 }
 
 /*----------------------------------------------------------
@@ -217,14 +223,14 @@ nav ul li a:hover {
   text-align: center;
   margin-top: 40px;
   padding: 20px;
-  background-color: #2A312E;
-  border-top: 2px solid #444444;
+  background-color: #f9f9f9;
+  border-top: 2px solid #dddddd;
 }
 
 .contact-info a {
-  color: #56D59B;
-  text-decoration: none;
+  color: #28A745;
 }
+
 .contact-info a:hover {
   text-decoration: underline;
 }
@@ -235,28 +241,9 @@ nav ul li a:hover {
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #111614;
-  color: #FFFFFF;
+  background-color: #333333;
+  color: #ffffff;
   font-size: 0.9em;
-}
-
-/*----------------------------------------------------------
-  READ MORE LINKS STYLING
-----------------------------------------------------------*/
-/* Increase size and weight for "Read more" or similar links within content */
-.read-more,
-.container p a {  /* if "Read More" links are normal anchors in a paragraph */
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #56D59B;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.read-more:hover,
-.container p a:hover {
-  color: #42C186;  /* darker green on hover */
-  text-decoration: underline;
 }
 
 /*----------------------------------------------------------
